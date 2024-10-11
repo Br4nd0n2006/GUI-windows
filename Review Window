@@ -1,0 +1,27 @@
+#################################
+# Review Window                 #
+#################################
+
+reviewApp = Window(app, title="Leave a review", height = 500, width=350)
+gapBox = Box(reviewApp, width=350, height=80)
+header = Text(reviewApp, text="Leave a Review")
+header.text_size = 21
+text_blank = Text(reviewApp, text=" ")
+inpBox = Box(reviewApp)
+btnBox = Box(reviewApp, layout="grid")
+accountTxt1.text_color = "blue"
+# text_blank = Text(mainBox, text=" ", grid=[0, 0])
+# text_blank = Text(mainBox, text=" Welcome to Brandon's Driving School ", grid=[0, 0])
+#
+text_area = TextBox(inpBox, multiline=True, scrollbar=True, width="35", height=10)
+##
+text_blank = Text(btnBox, text=" ", grid=[0,5])
+text_blank = Text(btnBox, text=" ", grid=[0,6])
+open_button = PushButton(btnBox, text="Submit", command=send_review, grid=[0,7], width=10, pady=6) # button on app, main window
+back_btn = PushButton(btnBox, text="Back", command=lambda: [go_back(reviewApp)], grid=[1,7], width=10, pady=6) # button on app, main window
+#app.bg = "#e8e8e8"
+#
+#
+# close all forms apart from login
+##
+reviewApp.hide()
