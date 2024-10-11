@@ -1,0 +1,38 @@
+#################################
+# Sign up Window                 #
+#################################
+
+SignUpApp = Window(app, title="Sign Up", height = 500, width=350)
+gapBox = Box(SignUpApp, width=350, height=80)
+header = Text(SignUpApp, text="Create an account")
+header.text_size = 21
+text_blank = Text(SignUpApp, text=" ")
+inpBox = Box(SignUpApp, layout="grid")
+btnBox = Box(SignUpApp, layout="grid")
+accountTxt1.text_color = "blue"
+# text_blank = Text(mainBox, text=" ", grid=[0, 0])
+# text_blank = Text(mainBox, text=" Welcome to Brandon's Driving School ", grid=[0, 0])
+#
+text_blank = Text(inpBox, text=" ", grid=[0,1])
+text = Text(inpBox, text= "First Name:     ", grid=[0,2], align="left")
+FN_textbox = TextBox(inpBox, grid=[1,2], width=25, align="right")
+text_blank = Text(inpBox, text=" ", grid=[0,3])
+text = Text(inpBox, text= "Username:     ", grid=[0,4], align="left")
+user_signup_textbox = TextBox(inpBox, grid=[1,4], width=25, align="right")
+text_blank = Text(inpBox, text=" ", grid=[0,5])
+text = Text(inpBox, text= "Password:     ", grid=[0,6], align="left")
+PW_signup_textbox = TextBox(inpBox, grid=[1,6], width=25, align="right", hide_text=True)
+#
+##
+text_blank = Text(btnBox, text=" ", grid=[0,5])
+text_blank = Text(btnBox, text=" ", grid=[0,6])
+open_button = PushButton(btnBox, text="Submit", command=sign_up_validate, grid=[0,7], width=10, pady=6) # button on app, main window
+go_back_btn = PushButton(btnBox, text="Back", command=lambda: [go_back(SignUpApp)], grid=[1,7], width=10, pady=6) # button on app, main window
+#app.bg = "#e8e8e8"
+#
+#
+# close all forms apart from login
+##
+reviewApp.hide()
+SignUpApp.hide()
+app.display()
