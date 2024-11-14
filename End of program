@@ -1,0 +1,3 @@
+SignUpApp.hide()
+Dashboard.hide()
+app.display()
