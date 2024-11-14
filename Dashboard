@@ -22,7 +22,6 @@ ThemeBtn = PushButton(topBox, text="Change Theme", align="left", command=change_
 logo = Picture(topBox, image="logo.png", height=80, align="left")
 SignOut = PushButton(topBox, text="Sign Out", align="right")
 padding02 = Text(topBox, text="", height = paddingHeight)
-#messagel = Text(app, text="DeLeitese con nuestros exquisitos pLatos")
 
 middleBox = Box(Dashboard, align="top", width= "fill", height= middleHeight, border= True)
 leftBox = Box(middleBox, width= leftWidth, height= middleHeight, border= True, align="left", layout="grid")
@@ -32,20 +31,8 @@ inputLabel03 = Text(leftBox, text="Select time of test", grid=[0,2], width = 40,
 #inputText03 = TextBox(leftBox, text="Type Input03 here", width = 40, grid=[1,2])
 SelectTestDateBtn = PushButton(leftBox, text="Select Test Date", command=create_calendar, grid=[1,0])
 text_blank = Text(btnBox, text=" ", grid=[0,1])
-#combo = Combo(app, options=["Beef", "Chicken", "Fish", "Vegetarian"])
 SelectTestTime = Combo(leftBox, options=["09:00", "10:00"], grid=[1, 2])
 text_blank = Text(btnBox, text=" ", grid=[0,3])
-
-# rightBox = Box(middleBox, width= rightWidth, height=middleHeight, border= True, layout="grid")
-# option01 = CheckBox (rightBox, text="", width = 2, grid=[0,0])
-# option01Text = Text (rightBox, text="Option01                      ", width = 30, align="left", grid=[1,0])
-# paddingOpt01 = Text(topBox, text="", height = paddingHeight)
-# option02 = CheckBox (rightBox, text="", width = 2, grid=[0,1])
-# option02Text = Text (rightBox, text="Option02 is really gigantic   ", width = 30, align="left", grid=[1,1])
-# paddingOpt02 = Text(topBox, text="", height = paddingHeight)
-# option03 = CheckBox (rightBox, text="", width = 2, grid=[0,2])
-# option03Text = Text (rightBox, text="Option03                      ", width = 30, align="left", grid=[1,2])
-# paddingOpt03 = Text(topBox, text="", height = paddingHeight)
 
 bottomBox = Box(Dashboard, align="top", width= "fill", height= bottomHeight, border= True)
 leftBottomBox = Box(bottomBox, align= "left",width= leftWidth, height= bottomHeight, border= True, layout = "grid")
